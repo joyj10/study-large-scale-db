@@ -4,17 +4,17 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/onion-db?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
     username: onion-user
-    password: onion1!       # ???? ????, ?? ????? ????? ??? ???? ?? ??
+    password: onion1!       # 테스트용으로 패스워드 작성, 운영 등에서는 별도 분리 필요
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
     hibernate:
       ddl-auto: update   # create, create-drop, update, validate, none
-    show-sql: true       # SQL ?? ??
+    show-sql: true
     properties:
       hibernate:
-        format_sql: true   # SQL ?? ?? ??
-        dialect: org.hibernate.dialect.MySQL8Dialect  # MySQL ??? ?? Dialect ??
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
 
   logging:
     level:
