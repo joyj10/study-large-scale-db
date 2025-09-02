@@ -23,4 +23,9 @@ public class UserService {
         user.setEmail(signUpUser.getEmail());
         return userRepository.save(user);
     }
+
+    @Transactional
+    public void deleteUser(Long userId) {
+        userRepository.deleteById(userId);
+    }
 }
